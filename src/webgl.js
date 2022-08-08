@@ -6,11 +6,12 @@ import vertex from './shaders/vertex.glsl'
 import vertexRefract from './shaders/vertexRefract.glsl'
 import fragment from './shaders/fragment.glsl'
 import fragmentRefract from './shaders/fragmentRefract.glsl'
+import { PostProcessing } from './postprocessing.js';
 
 import { EffectComposer } from 'three/examples/jsm/postprocessing/EffectComposer.js';
 import { RenderPass } from 'three/examples/jsm/postprocessing/RenderPass.js';
 import { ShaderPass } from 'three/examples/jsm/postprocessing/ShaderPass.js';
-import { PostProcessing } from './PostProcessing.js';
+
 import { Vector3 } from 'three';
 
 // let OrbitControls = require("three/examples/jsm/controls/OrbitControls").OrbitControls
