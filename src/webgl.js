@@ -1,4 +1,7 @@
 import * as THREE from 'three';
+import * as fs from 'fs';
+import gsap from 'gsap';
+
 import vertex from './shaders/vertex.glsl'
 import vertexRefract from './shaders/vertexRefract.glsl'
 import fragment from './shaders/fragment.glsl'
@@ -7,9 +10,11 @@ import fragmentRefract from './shaders/fragmentRefract.glsl'
 import { EffectComposer } from 'three/examples/jsm/postprocessing/EffectComposer.js';
 import { RenderPass } from 'three/examples/jsm/postprocessing/RenderPass.js';
 import { ShaderPass } from 'three/examples/jsm/postprocessing/ShaderPass.js';
-import { PostProcessing } from './postprocessing.js';
+import { PostProcessing } from './PostProcessing.js';
+import { Vector3 } from 'three';
 
-let OrbitControls = require("three/examples/jsm/controls/OrbitControls").OrbitControls
+// let OrbitControls = require("three/examples/jsm/controls/OrbitControls").OrbitControls
+
 
 export default class Sketch{
     constructor(){
@@ -35,13 +40,15 @@ export default class Sketch{
         this.camera.position.z = 1.3;
 
         this.scene = new THREE.Scene();
-        this.control = new OrbitControls(this.camera, this.renderer.domElement)
+        // this.control = new OrbitControls(this.camera, this.renderer.domElement)
         this.time = 0;
         this.mouse = 0;
+        this.speed = 0;
 
         this.addTCube();
 
         this.addMesh();
+        this.settings();
         this.mouseEvent();
         
         this.addPost();
@@ -53,6 +60,32 @@ export default class Sketch{
     mouseEvent(){
         document.addEventListener('mousemove', (e)=>{
             // mousemove
+            
+        })
+        this.lastX = 0;
+        this.lastY = 0;
+        document.addEventListener('mousedown', (e)=>{
+            this.moveOn();
+        })
+        document.addEventListener('mouseup', (e)=>{
+            this.moveBack();
+        })
+    }
+
+    moveOn(){
+        gsap.to(this.material.uniforms['uSpeed'], {
+            value: 4,
+            duration: 4,
+            delay: 0,
+            ease: "power2.out",
+        })
+    }
+    moveBack(){
+        gsap.to(this.material.uniforms['uSpeed'], {
+            value: 0,
+            duration: 4,
+            delay: 0,
+            ease: "power2.out",
         })
     }
 
@@ -92,7 +125,11 @@ export default class Sketch{
                 uMouse: {value: 0},
                 // progress: {type: "f", value: 0},
                 landscape: {value: this.texture},
-                uTime: {value: 0},
+                uTime: {value: 0.},
+                uSpeed: {value: this.speed},
+                uColorA: {value: {r: 210, g: 196, b: 147}},
+                uColorB: {value: {r: 210, g: 145, b: 92}},
+                uColorC: {value: {r: 137, g: 143, b: 147}},
                 // uSize: {value: 6.0},
                 // uScale: {value: 0}
             },
@@ -106,6 +143,7 @@ export default class Sketch{
 
 
         this.geometryRefract = new THREE.SphereBufferGeometry(0.4, 32, 32);
+        this.geometryRefract.position = new Vector3(1000,100,1000)
         this.materialRefract = new THREE.ShaderMaterial({
             vertexShader: vertexRefract,
             fragmentShader: fragmentRefract,
@@ -115,7 +153,11 @@ export default class Sketch{
                 tCube: {value: 0},
                 // progress: {type: "f", value: 0},
                 landscape: {value: this.texture},
-                uTime: {value: 0},
+                uTime: {value: 0.},
+                uSpeed: {value: this.speed},
+                uColorA: {value: {r: 210, g: 196, b: 147}},
+                uColorB: {value: {r: 210, g: 145, b: 92}},
+                uColorC: {value: {r: 137, g: 143, b: 147}},
                 // uSize: {value: 6.0},
                 // uScale: {value: 0}
             },
@@ -126,6 +168,12 @@ export default class Sketch{
         
         this.meshRefract = new THREE.Mesh( this.geometryRefract, this.materialRefract );
         this.scene.add( this.meshRefract );
+        this.meshRefract.position.set(0.2,-0.3,0.8)
+    }
+
+    settings(){
+        
+        
     }
 
     setupResize(){
@@ -141,18 +189,19 @@ export default class Sketch{
 
     render(){
         this.time++;
+        this.speed *= 0.99;
         
         this.meshRefract.visible = false;
         this.cubeCamera.update(this.renderer, this.scene);
         this.materialRefract.uniforms['tCube'].value = this.cubeRenderTarget.texture;
         this.meshRefract.visible = true;
 
-        this.scene.rotation.x = this.time / 2000;
-	    this.scene.rotation.y = this.time / 1000;
+        // this.scene.rotation.x = this.time / 2000;
+	    // this.scene.rotation.y = this.time / 1000;
         this.material.uniforms['uTime'].value = this.time*.008;
         this.customPass.uniforms[ 'time' ].value = this.time;
 
-        this.control.update();
+        // this.control.update();
         // this.renderer.render( this.scene, this.camera );
         this.composer.render();
         

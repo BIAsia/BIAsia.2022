@@ -3,6 +3,10 @@ varying vec2 vUV;
 varying vec3 vNormal;
 
 uniform float uTime;
+uniform float uSpeed;
+uniform vec3 uColorA;
+uniform vec3 uColorB;
+uniform vec3 uColorC;
 
 float mod289(float x){return x - floor(x * (1.0 / 289.0)) * 289.0;}
 vec4 mod289(vec4 x){return x - floor(x * (1.0 / 289.0)) * 289.0;}
@@ -55,15 +59,30 @@ void main() {
     // vec3 color1 = vec3(224./255., 245./255., 238./255.);
 
     // colors: new palettte
-    vec3 color3 = vec3(162./255., 189./255., 193./255.);
-    vec3 color1 = vec3(155./255., 206./255., 203./255.);
-    vec3 color2 = vec3(206./255., 221./255., 220./255.);
+    // vec3 color3 = vec3(162./255., 189./255., 193./255.);
+    // vec3 color1 = vec3(155./255., 206./255., 203./255.);
+    // vec3 color2 = vec3(206./255., 221./255., 220./255.);
+
+    
+
+    // colors: from pane
+    vec3 color1 = vec3(uColorA/255.);
+    vec3 color2 = vec3(uColorB/255.);
+    vec3 color3 = vec3(uColorC/255.);
+    // vec3 color3 = vec3(162./255., 189./255., 193./255.);
+    // vec3 color1 = vec3(155./255., 206./255., 203./255.);
+    // vec3 color2 = vec3(206./255., 221./255., 220./255.);
 
     // noise changed with time
     float n = noise(vPosition + uTime);
+
+    // make color change through time
+    color1 += vec3(cos(uTime*0.5)*0.1);
+
     
     // make line shape texture
-    vec2 baseUV = rotate2D(n)*vPosition.xy*.1;
+    vec2 baseUV = rotate2D(n)*vPosition.xy*0.1*(noise(vPosition)+uSpeed*0.5);
+    // baseUV = (vPosition.xx+uTime*0.1)*.15*(noise(vPosition)+uSpeed*0.1);
     float basePattern = lines(baseUV, .5);
     float secondPattern = lines(baseUV, .1);
 

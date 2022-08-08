@@ -1,19 +1,23 @@
 {
   "name": "color-noisy",
   "version": "1.0.0",
+  "type": "module",
   "description": "",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "parcel serve index.html --port 8888 --open",
-    "build": "rm -rf ./dist; parcel build index.html --public-url '.' --no-source-maps;parcel serve index.html --port 8888"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "parcel": "^2.5.0",
-    "three": "^0.140.0"
+    "gsap": "^3.10.4",
+    "three": "^0.140.0",
+    "vite": "^3.0.4"
   },
   "devDependencies": {
-    "@parcel/transformer-glsl": "^2.5.0"
+    "@parcel/transformer-glsl": "^2.5.0",
+    "buffer": "^6.0.3",
+    "vite-plugin-glsl": "^0.3.0"
   }
 }
