@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet/less" type="text/css" href="./style/style.less" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap" rel="stylesheet">
     <title>Document</title>
     <style>
         body {
@@ -18,15 +22,30 @@
             display: block;
         }
         #container {
+            top: 0;
+            left: 0;
             width: 100vw;
             height: 100vh;
+            position: fixed;
+            z-index: -100;
         }
+        
     </style>
 </head>
 <body>
+    <svg class="cursor" width="80" height="80" viewBox="0 0 80 80">
+		<!-- <circle class="cursor__inner" cx="40" cy="40" r="20"/> -->
+	</svg>
+    <div id="home" class="page"></div>
+        
     
     <div id="container"></div>
+    
+
     <script src="./src/webgl.js" type="module"></script>
+    <script src="./page/home.js" type="module"></script>
+    <script src="./src/cursor.js" type="module"></script>
+    <script src="./src/index.js" type="module"></script>
 
 </body>
 </html>
