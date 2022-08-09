@@ -14,6 +14,7 @@
     "cursor-dot": "^1.0.5",
     "gsap": "^3.10.4",
     "imagesloaded": "^5.0.0",
+    "less": "^4.1.3",
     "locomotive-scroll": "^4.1.4",
     "three": "^0.140.0",
     "vite": "^3.0.4"
