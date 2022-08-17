@@ -19,13 +19,12 @@ document.querySelector("#home").innerHTML = `
 <div class="col-container">
     <div class="col col-main section-list menu">
         <div class="section section-m menu__item">
-            <h3 class="menu__item-textinner">Interaction Designer</h3>
+            <h3 class="menu__item-textinner">UI/UX Designer</h3>
             <p>worked at Sensetime/Tencent ISUX/Mobiuspace</p>
         </div>
         <div class="section section-m menu__item">
-            <h3 class="menu__item-textinner">Website Designer & Developer</h3>
+            <h3 class="menu__item-textinner">Web Designer & Developer</h3>
             <p>with Framer & Three.js</p>
-            
         </div>
         <div class="section section-m menu__item">
             <h3 class="menu__item-textinner">Plugin Developer</h3>
