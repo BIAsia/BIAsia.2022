@@ -7,9 +7,9 @@ document.querySelector("#home").innerHTML = `
 <div class="nav">
     <div class="logo">Ziye Lu</div>
     <div class="nav-items">
-        <a href="">About me</a>
-        <a href="">Blog</a>
-        <a href="">Gallery</a>
+        <a href="https://biasia.notion.site/Projects-1f1d3bf925b1466c9722e3c16024b6df" target="_blank">Projects</a>
+        <a href="https://biasia.notion.site/Blog-357935cc0c914721b3586ad40c0c2745" target="_blank">Blog</a>
+        <a href="https://biasia.notion.site/Gallery-ea17ee51ab0e4657bf8465890133fa1c" target="_blank">Gallery</a>
     </div>
 </div>
 <div class="content-container">
@@ -69,7 +69,7 @@ document.querySelector("#home").innerHTML = `
         
     </div>
     <div class="col">
-        <div class="comment">AND...</div>
+        <div class="comment">AND A...</div>
         <div class="section-container">
             <div class="section section-s">
                 <h3>Notion
@@ -92,6 +92,12 @@ document.querySelector("#home").innerHTML = `
         </div>
     </div>
 </div>
+<footer>
+        Feel free to contact with me →
+        <div class="contact">
+            <a href="https://twitter.com/lzybiasia" target="_blank">Twitter</a> | <a href="mailto: lzybiasia@gmail.com">E-mail</a>
+        </div>
+</footer>
 </div>
 
 
