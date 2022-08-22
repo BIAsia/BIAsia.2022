@@ -14,7 +14,7 @@ document.querySelector("#home").innerHTML = `
 </div>
 <div class="content-container">
 <div class="title">
-    <h1>Ziye Lu</h1>
+    <h1>Ziyan Li</h1>
 </div>
 <div class="col-container">
     <div class="col col-main section-list menu">
@@ -22,11 +22,11 @@ document.querySelector("#home").innerHTML = `
             <h3 class="menu__item-textinner">UI/UX Designer</h3>
             <p>worked at Sensetime/Tencent ISUX/Mobiuspace</p>
         </a>
-        <a class="section section-m menu__item" target="_blank" href="https://biasia.notion.site/Web-Design-Develop-2ea579e464a54b4eb82f06b5f8e51416">
+        <a class="section section-m menu__item" target="_blank" href="https://design-toolkit.framer.website/">
             <h3 class="menu__item-textinner">Web Designer & Developer</h3>
             <p>with Framer & Three.js</p>
         </a>
-        <a class="section section-m menu__item" target="_blank" href="https://biasia.notion.site/Plugin-Develop-8d9bb04f3d78452a94b3bceebf4c1059">
+        <a class="section section-m menu__item" target="_blank" href="https://www.figma.com/community/plugin/1078279010891577195">
             <h3 class="menu__item-textinner">Plugin Developer</h3>
             <p>for Figma & Adobe XD</p>
         </a>

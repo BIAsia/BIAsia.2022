@@ -90,8 +90,9 @@ a {
     height: 25vh;
     display: flex;
     flex-direction: column-reverse;
+    font-size: 72px;
     h1{
-        font-size: 120px;
+        
         font-weight: 400;
     }
     
@@ -213,4 +214,14 @@ footer {
 .contact {
     display: inline;
     letter-spacing: .3px;
+}
+
+@media only screen and (max-width: 600px) {
+    footer {
+        position: relative;
+        margin-top: 56px;
+    }
+    .title {
+        font-size: 32px;
+    }
 }
