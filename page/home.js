@@ -36,14 +36,15 @@ document.querySelector("#home").innerHTML = `
                 <h3>Figma
                     Community
                     Contributor</h3>
-                <p>Figma/@biasia</p>
+                <p>Figma/
+                @biasia</p>
             </div>
             <div class="section section-s">
                 <h3>WebGL & 
                     GenerativeArt
                     Lover</h3>
-                <p>Self-built
-                    Generators</p>
+                <a href='https://gsbj6t.csb.app/' target="_blank">galaxy particle
+                    Generator</a>
             </div>
             <div class="section section-s">
                 <h3>Translate
@@ -83,8 +84,7 @@ document.querySelector("#home").innerHTML = `
             <div class="section section-s">
                 <h3>FFXIV
                     Dragoon</h3>
-                <p>Fighting in 
-                    Pandæmonium</p>
+                <p>(._.)</p>
             </div>
         </div>
     </div>
