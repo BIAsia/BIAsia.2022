@@ -7,9 +7,7 @@ document.querySelector("#home").innerHTML = `
 <div class="nav">
     <div class="logo">Ziye Lu</div>
     <div class="nav-items">
-        <a href="https://biasia.notion.site/Projects-1f1d3bf925b1466c9722e3c16024b6df" target="_blank">Projects</a>
-        <a href="https://biasia.notion.site/Blog-357935cc0c914721b3586ad40c0c2745" target="_blank">Blog</a>
-        <a href="https://biasia.notion.site/Gallery-ea17ee51ab0e4657bf8465890133fa1c" target="_blank">Gallery</a>
+        <a href="https://biasia.notion.site/Projects-1f1d3bf925b1466c9722e3c16024b6df" target="_blank">All Projects</a>
     </div>
 </div>
 <div class="content-container">
