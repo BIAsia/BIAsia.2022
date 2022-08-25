@@ -98,14 +98,14 @@ export default class MenuItem {
         })
         // animate the image wrap
         .to(this.DOM.revealInner, 0.2, {
-            ease: 'Sine.easeOut',
+            ease: 'cubic-bezier(0.7, 0, 0.2, 1)',
             startAt: {y: direction.y < 0 ? '-10%' : '10%', opacity: 0},
             y: '0%',
             opacity: 1,
         })
         // animate the image element
         .to(this.DOM.revealImage, 0.2, {
-            ease: 'Sine.easeOut',
+            ease: 'cubic-bezier(0.7, 0, 0.2, 1)',
             startAt: {y: direction.y < 0 ? '100%': '-100%'},
             y: '0%'
         }, 0);
@@ -125,12 +125,12 @@ export default class MenuItem {
             }
         })
         .to(this.DOM.revealInner, 0.2, {
-            ease: 'Sine.easeOut',
+            ease: 'cubic-bezier(0.7, 0, 0.2, 1)',
             y: direction.y < 0 ? '10%' : '-10%',
             opacity: 0,
         })
         .to(this.DOM.revealImage, 0.2, {
-            ease: 'Sine.easeOut',
+            ease: 'cubic-bezier(0.7, 0, 0.2, 1)',
             y: direction.y < 0 ? '-100%' : '100%',
             opacity: 1,
         }, 0);

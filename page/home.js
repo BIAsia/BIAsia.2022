@@ -20,11 +20,11 @@ document.querySelector("#home").innerHTML = `
             <h3 class="menu__item-textinner">UI/UX Designer</h3>
             <p>worked at Sensetime/Tencent ISUX/Mobiuspace</p>
         </a>
-        <a class="section section-m menu__item" target="_blank" href="https://design-toolkit.framer.website/">
+        <a class="section section-m menu__item" target="_blank" href="https://biasia.notion.site/Web-Design-Develop-2ea579e464a54b4eb82f06b5f8e51416">
             <h3 class="menu__item-textinner">Web Designer & Developer</h3>
             <p>with Framer & Three.js</p>
         </a>
-        <a class="section section-m menu__item" target="_blank" href="https://www.figma.com/community/plugin/1078279010891577195">
+        <a class="section section-m menu__item" target="_blank" href="https://biasia.notion.site/Plugin-Develop-8d9bb04f3d78452a94b3bceebf4c1059">
             <h3 class="menu__item-textinner">Plugin Developer</h3>
             <p>for Figma & Adobe XD</p>
         </a>
@@ -33,13 +33,6 @@ document.querySelector("#home").innerHTML = `
         <div class="comment">I AM ALSO A...</div>
         <div class="section-container">
             <div class="section section-s">
-                <h3>Figma
-                    Community
-                    Contributor</h3>
-                <p>Figma/
-                @biasia</p>
-            </div>
-            <div class="section section-s">
                 <h3>WebGL & 
                     GenerativeArt
                     Lover</h3>
@@ -47,21 +40,23 @@ document.querySelector("#home").innerHTML = `
                     Generator</a>
             </div>
             <div class="section section-s">
+                <h3>Figma
+                    Community
+                    Contributor</h3>
+                <a href='https://www.figma.com/@biasia' target="_blank">Figma/
+                @biasia</a>
+            </div>
+            <div class="section section-s">
+                <h3>AI-generator 
+                Player</h3>
+                <a href='https://biasia.notion.site/PlayWithAI-e6ca4025c1a847999ecd6823bfe9bdc2' target="_blank">Gallery
+                /PlayWithAI</a>
+            </div>
+            <div class="section section-s">
                 <h3>Translate
                     Assistant</h3>
                 <p>How to Speak
                     Machine</p>
-            </div>
-            <div class="section section-s">
-                <h3>Midjourney
-                    Player</h3>
-                <p>Gallery/
-                    PlayWithAI</p>
-            </div>
-            <div class="section section-s">
-                <h3>DDL-driven
-                    Bloger</h3>
-                <p>Blog</p>
             </div>
         </div>
         
