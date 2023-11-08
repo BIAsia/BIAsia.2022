@@ -18,7 +18,7 @@ document.querySelector("#home").innerHTML = `
     <div class="col col-main section-list menu">
         <a class="section section-m menu__item" target="_blank" href="https://biasia.notion.site/UI-UX-Design-768dba6b539e4289a4ee0eede4eb3d5b">
             <h3 class="menu__item-textinner">UI/UX Designer</h3>
-            <p>worked at Sensetime/Tencent ISUX/Mobiuspace</p>
+            <p>working at TikTok. Before in PingCAP/Sensetime/Tencent ISUX</p>
         </a>
         <a class="section section-m menu__item" target="_blank" href="https://biasia.notion.site/Web-Design-Develop-2ea579e464a54b4eb82f06b5f8e51416">
             <h3 class="menu__item-textinner">Web Designer & Developer</h3>
